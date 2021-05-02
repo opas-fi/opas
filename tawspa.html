@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Islamopas.com: Ennustaminen</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="bilder/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/w3.css" media="screen">
+<link rel="stylesheet" href="css/w3-theme-amber.css" media="screen">
+<link rel="stylesheet" href="css/font-awesome.css" media="screen">
+<link rel="stylesheet" href="css/custom.css" media="screen">
+<link rel="stylesheet" href="css/keyboard.css" media="screen">
+<link rel="stylesheet" href="css/page-print.css" media="print">
+
+</head>
+<body>
+
+<!-- begin  -->
+<div class="w3-theme  w3-content w3-center w3-padding-lr-0;w3-padding-tb-0;" >
+  <h1 class="w3-jumbo w3-hide-small w3-hide-medium w3-hide-large"><a href="index.html">Islamopas.com</a></h1>
+  <a href="index.html"><img class="w3-round noprint" src="bilder/ig4kopia.jpg" style="width:100%; "></a>
+</div>
+<!-- end  -->
+
+<!-- begin  -->
+<div class="w3-bar w3-theme w3-left-align w3-large w3-content noprint">
+<div class="w3-col w3-container w3-padding-lr-0 w3-margin-0  w3-left l2 m2 s5">
+  <a class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white" href="#">Etsi</a>		
+	<div class="w3-dropdown-hover w3-hide-medium w3-hide-large">		
+		<button class="w3-button w3-hover-white w3-theme"><i class="fa fa-bars"><!-- icon --></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-theme-l3">
+      <a href="category-creed.html" class="w3-bar-item w3-button">Jumala</a>
+      <a href="category-koraani.html" class="w3-bar-item w3-button">Koraani</a>
+      <a href="category-islam.html" class="w3-bar-item w3-button">Islam</a>
+	  <a href="category-prophethood.html" class="w3-bar-item w3-button">Profeetta</a>
+	  <a href="category-pilaria.html" class="w3-bar-item w3-button">Viisi Pilaria</a>
+	  <a href="kirjasto.html" class="w3-bar-item w3-button">Kirjasto</a> 
+    </div>
+  </div> 
+		 <a href="index.html" class="w3-bar-item w3-button w3-left w3-hide-small w3-hide-large w3-hover-white w3-large"><i class="fa fa-home"><!-- icon --></i></a>
+		<button onclick="toggleDiv('etsi')" class="w3-bar-item w3-button w3-left w3-hide-large w3-hover-white w3-large">
+        <i class="fa fa-search"><!-- icon --></i>
+      </button>  
+</div>
+<div class="w3-col w3-container w3-center l8 m6 s1">
+    <a href="koraani/" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-caret-right w3-large"><!-- icon --></i> Koraani</a>
+    <a href="kirjasto.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white"><i class="fa fa-caret-right w3-large"><!-- icon --></i> Kirjasto</a>
+    <a href="faq.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white"><i class="fa fa-caret-right w3-large"><!-- icon --></i> Faq</a>
+    <a href="moske.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white"><i class="fa fa-caret-right w3-large"><!-- icon --></i> Moskeijaopas</a>
+	<a href="palaute.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-hover-white"><i class="fa fa-caret-right w3-large"><!-- icon --></i> Yhteys</a>
+</div>
+
+
+<div class="w3-col w3-container w3-right w3-padding-lr-0 w3-margin-0 l2 m4 s6">
+  	<div class="w3-dropdown-hover w3-right">
+    <button class="w3-button w3-hover-white w3-theme">FI <i class="fa fa-caret-down"><!-- icon --></i></button>
+    <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-theme-l3">
+      <a href="http://www.islamguiden.com"       target="_blank" class="w3-bar-item w3-button" title="Svenska">SV</a>
+      <a href="https://www.islamreligion.com"    target="_blank" class="w3-bar-item w3-button" title="English">EN</a>
+      <a href="https://www.islamreligion.com/fr" target="_blank" class="w3-bar-item w3-button" title="Français">FR</a>
+	  <a href="https://www.islamreligion.com/es" target="_blank" class="w3-bar-item w3-button" title="Español">ES</a>
+	  <a href="https://www.islamreligion.com/de" target="_blank" class="w3-bar-item w3-button" title="Deutsch">DE</a>
+	  <a href="https://www.islamreligion.com/ru" target="_blank" class="w3-bar-item w3-button" title="Русский">RU</a>
+	  <a href="https://www.islamreligion.com/pt" target="_blank" class="w3-bar-item w3-button" title="Português">PT</a>
+	  <a href="https://www.islamreligion.com/cn" target="_blank" class="w3-bar-item w3-button" title="中文">CN</a>
+	  <a href="https://www.islamreligion.com/jp" target="_blank" class="w3-bar-item w3-button" title="日本語">JP</a>
+	  <a href="https://www.islamreligion.com/it" target="_blank" class="w3-bar-item w3-button" title="Italiano">IT</a>
+    </div>
+  </div>
+    <a href="https://www.facebook.com/Islamopas" target="_blank"><button class="w3-bar-item w3-button w3-right w3-hover-white w3-large"><i class="fa fa-facebook-official"><!-- icon --></i></button></a>
+	 <a href="https://www.twitter.com/islamopas" target="_blank"><button class="w3-bar-item w3-button w3-right w3-hover-white w3-large w3-hide-small w3-hide-large"><i class="fa fa-twitter"><!-- icon --></i></button></a>
+</div>
+</div>
+
+    <div id="etsi" class="w3-bar w3-content w3-hide w3-container w3-theme-l4 w3-hide-large noprint">
+		<div class="w3-row w3-section">
+						<form method="get" action="https://www.google.com/custom" target="_blank">
+							<fieldset style="border:0;margin: 0;padding: 0;"> 
+                   				<input type="hidden" name="domains" value="www.islamopas.com">
+								<input type="text" name="q" size="8" class="w3-bar-item w3-input w3-white w3-hover-theme">
+                                <input type="submit" name="sa" value="etsi" class="w3-bar-item w3-button w3-grey">
+								<input name="sitesearch" value="www.islamopas.com" type="hidden">
+							</fieldset> 
+						</form>
+		</div>	
+	</div>
+<!-- end  -->
+
+
+
+<!-- begin  -->
+<div class="w3-bar w3-content w3-cell-row w3-hide-small w3-hide-medium noprint">
+<div class="w3-cell w3-cell-top" style="background-image: url('bilder/bk8.jpg');width:16.66666%;" >
+						<form method="get" action="https://www.google.com/custom" target="_blank">
+							<fieldset style="border:0;margin: 0;padding: 0;"> 
+                   				<input type="hidden" name="domains" value="www.islamopas.com">
+								<input type="text" name="q" size="8" class="w3-hover-theme w3-animate-input" style="border: 1px solid #000000;margin-left: 10px;width: 120px;margin-bottom:5px;margin-top: 10px;">
+                                <input type="submit" name="sa" value="etsi" style="border: 2px outset #d7b9c9;margin-left: 30px;text-transform: capitalize;">
+								<input name="sitesearch" value="www.islamopas.com" type="hidden">
+							</fieldset> 
+						</form>
+</div>
+<div class="w3-cell w3-theme-l4" >
+	<div class="w3-display-container">
+		<img src="bilder/banner3.jpg" width="100%" alt="Islamopas">
+		<div class="w3-display-bottommiddle">
+			<p class="w3-padding-tb-0 w3-margin-0 w3-tiny" style="color:red; " id="gDate"></p>						
+		</div>
+	</div>
+</div>
+<div class="w3-cell" style="background-image: url('bilder/bk8.jpg');width:16.66666%">
+				<span class="w3-tag w3-round w3-theme-l5 w3-cell-middle" id="hDate"></span>
+</div>
+</div>
+<!-- end  -->
+
+
+<!-- begin  -->
+<div class="w3-bar w3-content w3-margin-0 w3-white">
+
+<!-- begin  -->
+<div class="w3-col w3-container w3-bar-block w3-theme-l5 w3-padding-lr-0 w3-padding-tb-0 w3-margin-0 w3-hide-small l2 m3 noprint">
+
+<!-- begin  -->
+<div>
+  <button onclick="toggleDiv('left1')" class="w3-button w3-block w3-left-align w3-theme-l3 w3-padding-small w3-hover-theme-l3">
+  Jumala</button>
+  <div id="left1" class="w3-hide w3-show">
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="existens.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Jumalan olemassaolo</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="gudsegenskap.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Jumalan ominaisuudet</a>
+  </div>
+    <br>
+</div>
+
+<!-- end  -->
+
+<!-- begin  -->
+<div>
+  <button onclick="toggleDiv('left2')" class="w3-button w3-block w3-left-align w3-theme-l3 w3-padding-small w3-hover-theme-l3">
+  Koraani</button>
+  <div id="left2" class="w3-hide w3-show">
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="koranen.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Koraani</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="koranvetenskapen.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Tiede</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="skapelsen.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Luominen</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="foster.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Sikiönkehitys</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="koranovrigt.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Muuta</a>
+  </div>
+    <br>
+</div>
+<!-- end  -->
+
+
+<!-- begin  -->
+<div>
+  <button onclick="toggleDiv('left3')" class="w3-button w3-block w3-left-align w3-theme-l3 w3-padding-small w3-hover-theme-l3">
+  Islam</button>
+  <div id="left3" class="w3-hide w3-show">
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="vadislam.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Mitä on Islam?</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="trosartiklar.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Uskonkappaleet</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="hogtider.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Islam. Tärkeät päivät</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="tawhid.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Monoteismi</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="konvertering.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Kääntyminen Islamiin palaaminen</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="kalender.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Islamilainen Kalenteri</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="missupp.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Vääriä käsityksiä</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="missfor.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Väärin-ymmärtäminen</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="islamovrigt.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Muuta</a>
+  </div>
+  <br>
+</div>
+<!-- end  -->
+
+<!-- begin  -->
+<div>
+  <button onclick="toggleDiv('left4')" class="w3-button w3-block w3-left-align w3-theme-l3 w3-padding-small w3-hover-theme-l3">
+  Profeetta</button>
+  <div id="left4" class="w3-hide w3-show">
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="sistaprofeten.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Viimeinen profeetta</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="hadith.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Profeetan hadithit</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="foljeslagare.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Seuraajat</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="ovrigtprofeten.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Muuta</a>
+  </div>
+    <br>
+</div>
+<!-- end  -->
+
+<!-- begin  -->
+<div>
+  <button onclick="toggleDiv('left5')" class="w3-button w3-block w3-left-align w3-theme-l3 w3-padding-small w3-hover-theme-l3">
+  Viisi Pilaria</button>
+  <div id="left5" class="w3-hide w3-show">
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="shahada.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Uskontunnustus</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="bonen.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Rukous</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="allmosan.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Almut</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="fastan.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Paasto</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="vallfarden.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Pyhiinvaellus</a>
+  </div>
+    <br>
+</div>
+<!-- end  -->
+
+<!-- begin  -->
+<div>
+  <button onclick="toggleDiv('left6')" class="w3-button w3-block w3-left-align w3-theme-l3 w3-padding-small w3-hover-theme-l3">
+  Islam & Ruoka</button>
+  <div id="left6" class="w3-hide w3-show">
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="matregler.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Sääntöja ruuasta</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="livsmedel.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Lisäaineet</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="alkohol.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Alkoholi</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="gris.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Sianliha</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="ovrigtmat.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Muuta</a>
+  </div>
+    <br>
+</div>
+<!-- end  -->
+
+<!-- begin  -->
+<div>
+  <button onclick="toggleDiv('left7')" class="w3-button w3-block w3-left-align w3-theme-l3 w3-padding-small w3-hover-theme-l3">
+  Kirjasto</button>
+  <div id="left7" class="w3-hide w3-show">
+	<a class="w3-button w3-block w3-left-align w3-padding-small" href="kirjasto.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Suomeksi</a>
+	<a class="w3-button w3-block w3-left-align w3-padding-small" href="http://en.islamway.net/books" target="_blank"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> English</a>
+    <a class="w3-button w3-block w3-left-align w3-padding-small" href="http://www.islamguiden.com" target="_blank"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Svenska</a>
+    <a class="w3-button w3-block w3-left-align w3-padding-small" href="http://ar.islamway.net/books" target="_blank"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Arabiaksi</a>
+  </div>
+    <br>
+</div>
+<!-- end  -->
+
+<!-- begin  -->
+<div>
+  <button onclick="toggleDiv('left8')" class="w3-button w3-block w3-left-align w3-theme-l3 w3-padding-small w3-hover-theme-l3">
+  Muuta</button>
+  <div id="left8" class="w3-hide w3-show">
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="ordlista.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> Sanasto</a>
+  <a class="w3-button w3-block w3-left-align w3-padding-small" href="faq.html"><i class="fa fa-caret-right w3-medium"><!-- icon --></i> FAQ</a>
+  </div>
+</div>
+<!-- end  -->
+
+</div>
+
+
+<div class="w3-col w3-container l8 m9" >
+<div class="w3-row-padding w3-content w3-white">
+<article>
+      <header>
+        <hgroup>
+          <h1>Ennustaminen</h1>
+          <h2>5. oppitunti</h2>
+        </hgroup>
+      </header>
+      <p>Kuten edellisellä oppitunnilla mainittiin, on ihmisiä, jotka väittävät omaavansa tietoa näkymättömästä ja tulevaisuudesta. Heidät tunnetaan useilla eri nimillä, kuten ennustaja, näkijä, meedio, merkkienlukija, maagikko, astrologi jne. Ennustajat käyttävät erilaisia menetelmiä ja välineitä, joiden avulla he väittävät saavansa tietonsa, esimerkiksi teelehdet, viivojen piirtäminen, numeroiden kirjoittaminen, käsistä lukeminen, horoskooppien laatiminen, kristallipallosta katsominen jne. Tällä oppitunnilla käsitellään erilaisia ennustamistapoja, paitsi magiaa, joka otetaan esille seuraavalla kerralla. Ne ihmiset, jotka harjoittavat okkultismia ja väittävät voivansa paljastaa näkymättömän ja ennustaa tulevaisuuden, voidaan jakaa kahteen ryhmään:</p>
+      <ol>
+        <li>Ne, joilla ei ole mitään todellista kykyä tai salaisuutta, vaan he vain kertovat asiakkailleen yleisistä, useimpia ihmisiä koskettavista asioista. He suorittavat useimmiten joitakin tarkoituksettomia rituaaleja ja antavat sitten laskelmoidut arvauksensa. Jotkut heidän arvailuistaan toteutuvat siksi, että ne koskevat niin tavallisia tapahtumia. Useimmilla ihmisillä on taipumus muistaa vain ne harvat asiat, jotka toteutuvat, ja unohtaa pian ne, jotka eivät toteudu. Tämä johtuu siitä, että jonkin ajan kuluttua kaikki ennustukset puolittain unohtuvat ja painuvat alitajuntaan, kunnes jokin tapahtuma saa ne jälleen palaamaan muistiin. Esimerkiksi on tullut tavaksi länsimaissa julkaista vuoden alussa joukko useiden kuuluisien meedioiden ennustuksia. Kun Amerikassa tehtiin tutkimus eri ennustuksista vuonna 1980, havaittiin, että parhaiten onnistuneellakin meediolla oli vain 25 % oikein.</li>
+        <li>Toinen ryhmä ovat ne, jotka ovat saaneet kontaktin dzinneihin (henkiin). Tämä ryhmä on hyvin tärkeä, sillä heidän toimintaansa liittyy pahimmanlaatuista Shirkiä, ja siinä mukana olevat tietävät yleensä paljonkin ja edustavat todellista Fitnaa (kiusausta) sekä muslimeille että ei-muslimeille.</li>
+      </ol>
+      <h2>Dzinnien maailma</h2>
+      <p>Jotkut ihmiset ovat yrittäneet kieltää dzinnien olemassaolon, vaikka heille on omistettu kokonainen kappale Koraanissa, suura al-Dzinn (72). Vedoten sanan Dzinn kirjaimelliseen merkitykseen, joka tulee verbistä Janna, Yajunnu (peittää, piilottaa), he väittävät sanan Dzinn oikeastaan viittaavaan "älykkäisiin muukalaisiin". Toiset ovat jopa väittäneet dzinnin olevan ihminen, jolla on vihainen luonne. Mutta totuus on, että dzinnit ovat Allahin luotuja, jotka elävät yhtaikaa ihmisen kanssa maan päällä. Allah loi dzinnit ennen ihmistä ja Hän käytti niiden luomiseen toisenlaista ainetta kuin ihmisen. Allah sanoi:</p>
+      <blockquote class="koraani">
+        <p>"Totisesti, Me olemme luonut ihmisen valajan savesta, mustasta, haisevasta liejusta. Ja dzinnin me loimme jo aikaisemmin palavasta tulesta."</p>
+        <footer>
+          <cite>(Koraani 15:26-27)</cite>
+        </footer>
+      </blockquote>
+      <p>Heidät nimitettiin dzinneiksi, koska he olivat ihmisen silmälle näkymättömiä. Iblis (Saatana) on yksi dzinneistä, vaikka hän olikin enkeleiden joukossa, kun Allah määräsi heidät kumartamaan Aadamin edessä. Kun hän kieltäytyi kumartamasta ja häneltä kysyttiin, miksi, Allah sanoi:</p>
+      <blockquote class="koraani">
+        <p>"Tämä vastasi: »Olen parempi kuin hän: Sinä olet luonut minut tulesta, ja hänet loit maan tomusta."</p>
+        <footer>
+          <cite>(Koraani 38:76)</cite>
+        </footer>
+      </blockquote>
+      <p>'Aisha kertoi profeetan (saas) sanoneen [1]:</p>
+      <p/>
+      <blockquote class="hadith">
+        <p>"Enkelit luotiin valosta ja dzinnit savuamattomasta tulesta."</p>
+        <footer>
+          <cite/>
+        </footer>
+      </blockquote>
+      <p>Allah sanoi myös:,</p>
+      <blockquote class="koraani">
+        <p>"Kun Me lausuimme enkeleille: »Kumartakaa ihmistä, niin he kumartuivat kaikki paitsi saatana. Hän oli dzinni ja siksi tottelematon Herransa käskylle."</p>
+        <footer>
+          <cite>(Koraani 18:50)</cite>
+        </footer>
+      </blockquote>
+      <p>Täten on väärin sanoa hänen olevan langennut enkeli tai jokin vastaava.</p>
+      <p>Dzinnit voidaan jakaa kolmeen lajiin sen mukaan, millaista niiden olemassaolo on. Profeetta (saas) sanoi: "On kolmea lajia dzinnejä: yhdet niistä lentelevät koko ajan ilmassa, toiset ovat olemassa käärmeinä ja koirina, ja kolmas on maahan sidoksissa oleva laji, joka asuu yhdessä paikassa tai vaeltelee ympäriinsä." [2]</p>
+      <p>Dzinnit jakautuvat vielä kahteen ryhmään niiden uskon mukaan: muslimit (uskovat) ja kaafirit (uskottomat). Allah viittaa uskoviin dzinneihin suurassa al-Dzinn seuraavasti:</p>
+      <blockquote class="koraani">
+        <p>"Sano: »Minulle on ilmoitettu, että osa dzinneistä kuunteli ja sanoi: 'Totisesti olemme kuulleet luettavan ihmeellistä Koraania, joka ohjaa oikeaan, ja me uskomme siihen emmekä koskaan tahdo asettaa ketään muuta Jumalamme rinnalle. Totisesti Hän ei - ääretön on Herramme majesteetti - ole ottanut vaimoa eikä lasta. Vain mielettömät joukostamme sepittävät sopimattomia asioita Jumalasta."</p>
+        <footer>
+          <cite>(Koraani 72:1-4)</cite>
+        </footer>
+      </blockquote>
+      <blockquote class="koraani">
+        <p>"Joukostamme ovat eräät totisesti Herralle alistuneita muslimeja, ja toiset jumalattomia. Ne, jotka ovat muslimeja, ovat niitä, joiden päämääränä on vanhurskaus. Mitä taasen tulee jumalattomiin, kuluttaa heidät helvetin tuli."</p>
+        <footer>
+          <cite>(Koraani 72:14-15)</cite>
+        </footer>
+      </blockquote>
+      <p>Niihin dzinneihin, jotka eivät usko, viitataan monilla eri nimillä sekä arabiaksi että ruotsiksi: Ifreet, Shaytaan, Qareen, demonit, paholaiset, henget, kummitukset jne. Ne yrittävät johdattaa ihmistä harhaan monin tavoin. Sitä, joka kuuntelee niitä ja toimii niiden hyväksi, kutsutaan ihmis-Shaytaaniksi (paholaiseksi). Allah sanoo:</p>
+      <blockquote class="koraani">
+        <p>"Niinmuodoin olemme Me jokaiselle profeetalle asettanut vastustajia, nimittäin riivaajia ihmisten ja dzinnien joukosta,"</p>
+        <footer>
+          <cite>(Koraani 6:112)</cite>
+        </footer>
+      </blockquote>
+      <p>Jokaisella ihmisellä on oma erityinen dzinninsä, joka seuraa häntä, ja jota kutsutaan nimellä Qareen (eli seuralainen). Se on osa ihmisen koetta tässä elämässä. Tämä dzinni yllyttää hänen alhaisimpia halujaan ja yrittää koko ajan saada häntä poikkeamaan siitä, mikä on oikein. Profeetta (saas) puhui tästä suhteesta seuraavasti:</p>
+      <blockquote class="hadith">
+        <p>"Jokainen on saanut oman seuralaisen dzinnien joukosta." Sahaabit kysyivät: "Oletko sinäkin, oi Allahin sanansaattaja?" Ja profeetta (saas) vastasi: "Minäkin, vaikka Allah onkin auttanut minua häntä vastaan ja hän on luovuttanut. Nyt hän ainoastaan kehottaa minua tekemään hyvää."</p>
+        <footer>
+          <cite>[3]</cite>
+        </footer>
+      </blockquote>
+      <p>Profeetta Sulaymaanille (Salomonille) annettiin ihmeellinen valta dzinnien yli, merkkinä siitä, että hän oli profeetta. Allah sanoi:</p>
+      <blockquote class="koraani">
+        <p>"Ja hänen sotajoukkonsa, jotka käsittivät raakalaisia sekä sivistyneitä, myöskin lentäväin parvia , koottiin Salomon eteen katselmusta varten"</p>
+        <footer>
+          <cite>(Koraani 27:17)</cite>
+        </footer>
+      </blockquote>
+      <p>Mutta tätä kykyä ei annettu kenellekään muulle. Kenenkään muun ei ole sallittu kontrolloida dzinnejä eikä kukaan siihen pysty. Profeetta (saas) sanoi: "Totisesti, eräs Ifreet dzinnien joukosta sylkäisi minua viime yönä ja yritti rikkoa Salaahini (rukoukseni). Allah kuitenkin antoi minun voittaa hänet ja tahdoin sitoa hänet yhteen talon pilareista, jotta te kaikki voisitte nähdä hänet aamulal. Silloin muistin veljeni Sulaymaanin rukoukset [4]:</p>
+      <blockquote class="koraani">
+        <p>"Herra, armahda minua ja anna minulle valtakunta, joka ei joudu kenellekään kelvottomalle perinnöksi"</p>
+        <footer>
+          <cite>(Koraani 38:35)</cite>
+        </footer>
+      </blockquote>
+      <p>Ihminen ei voi hallita dzinnejä, koska se oli erityinen ihme, joka annettiin vain profeetta Sulaymanille. Tosiasiassa yhteys dzinneihin muutoin kuin oman kokemuksen tai onnettomuuden kautta luodaan useimmiten häpeällisten aktien kautta, jotka uskonnossa ovat inhottuja ja kiellettyjä. [5] Pahat dzinnit, joita näin kutsutaan, lisäävät niiden kanssa yhteistyössä olevien syntejä ja epäuskoa Jumalaa kohtaan. Niiden päämäärä on vetää niin monia muita kuin mahdollista mukaan suurimpaan syntiin, palvomaan muita Jumalan sijasta tai Hänen rinnallaan.</p>
+      <p>Eräänlaisen yhteyden dzinneihin ottavat ne, jotka ennustavat, ja dzinnit voivat kertoa heille tietyistä tapahtumista tulevaisuudessa. Profeetta (saas) kuvaili, kuinka dzinnit keräävät tietoa tulevasta. Hän kertoi, että dzinnit voivat matkata alempiin taivaisiin ja kuulla jotakin tulevaisuudesta, kun enkelit puhuvat siitä keskenään. Sitten ne palaavat maan pinnalle ja kertovat tietonsa yhteyshenkilöilleen ihmisten keskuudessa. [6] Tätä tapahtui usein ennen kuin Muhammedista (saas) tuli profeetta, ja ennustajilla oli usein erittäin oikeita tietoja. Heistä saattoi tulla hyvin arvostettuja kuninkaallisissa hoveissa ja tietyissä uskonnoissa ympäri maailman heitä jopa palvottiin.</p>
+      <p>Sen jälkeen, kun profeetta Muhammed (saas) aloitti tehtävänsä, tilanne muuttui. Allah asetti enkelit vartioimaan tarkasti alempia taivaita, ja useimmat dzinnit ajettiin tiehensä meteorien ja kuumien lentävien kappaleiden avulla. Allah kuvaili tätä ilmiötä Koraanissa seuraavassa dzinnien lausumassa:</p>
+      <blockquote class="koraani">
+        <p>"Me todellakin etsimme nousua taivaaseen, mutta havaitsimme sen olevan täynnä voimakkaita vartijoita ja liekkejä. Katso, meillä oli tapana istua muutamilla paikoilla kuullaksemme, mutta se, joka nyt yrittää kuunnella, kohtaa hänelle varatun liekin."</p>
+        <footer>
+          <cite>(Koraani 72:8-9)</cite>
+        </footer>
+      </blockquote>
+      <p>Allah sanoi myös:</p>
+      <blockquote class="koraani">
+        <p>"Ja Me sitä vartioimme jokaista karkoitettua pahaahenkeä vastaan. Mutta joka haluaa kuunnella (sanaa) salakähmäisesti, sitä seuraa tulinen liekki ."</p>
+        <footer>
+          <cite>(Koraani 15:17-18)</cite>
+        </footer>
+      </blockquote>
+      <p>Ibn'Abbas sanoi: "Kun profeetta (saas) ja ryhmä hänen seuralaisiaan lähtivät Ukaadhin markkinoille, kokoontuivat paholaiset kuuntelemaan uutisia taivaasta. Meteoreja sinkoili heidän päälleen, jolloin ne palasivat omiensa joukkoon. Kun niiltä kysyttiin, mitä oli tapahtunut, ne kertoivat sen omilleen. Jotkut niistä tuumivat, että jotakin oli täytynyt tapahtua, joten ne levittäytyivät ympäri maan löytääkseen syyn. Eräät niistä tapasivat profeetan (saas) ja hänen seuralaisensa näiden tehdessä Salaahia (rukousta) ja kuulivat Koraania lausuttavan. Ne ajattelivat, että tämän täytyi olla sitä, mikä oli estänyt niitä kuulemasta. Palattuaan taas kansansa pariin ne kertoivat [7]:</p>
+      <blockquote class="koraani">
+        <p>"Totisesti olemme kuulleet luettavan ihmeellistä Koraania, joka ohjaa oikeaan, ja me uskomme siihen emmekä koskaan tahdo asettaa ketään muuta Jumalamme rinnalle."</p>
+        <footer>
+          <cite>(Koraani 72:1-2)</cite>
+        </footer>
+      </blockquote>
+      <p>Niinpä dzinnit eivät enää voineet hankkia tietoja tulevasta yhtä helposti, kuin ne olivat voineet ennen profeetan (saas) ilmaantumista. Sen takia ne nyttemmin sekoittavat tietoihinsa paljon valheita. Profeetta (saas) sanoi:</p>
+      <blockquote class="hadith">
+        <p>"Ne (dzinnit) välittivät tietonsa edelleen alas, kunnes ne tavoittivat jonkin maagikon ja ennustajan. Joskus meteoriitti hävitti ne, ennen kuin ne saivat tietonsa viedyksi eteenpäin. Jos ne ehtivät välittää tietonsa ennen kuin niihin osui, olivat ne jo lisänneet siihen yli sata valhetta."</p>
+        <footer>
+          <cite>[8]</cite>
+        </footer>
+      </blockquote>
+      <p>Aisha kertoi, että kun hän kysyi Allahin lähettiläältä (saas) niistä, jotka osasivat ennustaa, tämä vastasi, että he eivät ole mitään. Silloin Aisha mainitsi, että joskus ennustajat pystyivät näkemään asioita, jotka olivat tosia. Profeetta (saas) sanoi:</p>
+      <blockquote class="hadith">
+        <p>"Se on vain osa totuutta, jonka dzinni on varastanut ja lörpöttelee ystävänsä korvaan; mutta se sekoittaa siihen sata valhetta."</p>
+        <footer>
+          <cite>[9]</cite>
+        </footer>
+      </blockquote>
+      <p>Kerran, kun Umar ibn al-Khattab oli istumassa, hänet ohitti tyylikäs mies (Sawad ibn Qarib). Umar sanoi: "Jos en ole väärässä, tuo henkilö seuraa edelleen ennen islamia ollutta uskontoaan tai ehkäpä hän on yksi sen ennustajista." Hän määräsi miehen tuotavaksi eteensä ja kysyi tältä siitä, mitä epäili. Mies vastasi: "En ikinä ole nähnyt sellaista päivää, kun muslimi kohtaa tuollaisia syytöksiä." Umar sanoi: "Totisesti olen vakuuttunut siitä, että voit kertoa minulle jotakin." Silloin mies sanoi: "Olin heidän ennustajansa tietämättömyyden aikana." Umar kysyi: "Kerro minulle, mikä oli merkillisintä, jonka naisdzinnisi kertoi sinulle." Mies sanoi: "Eräänä päivänä, kun olin markkinoilla, hän tuli luokseni hyvin huolestuneena ja sanoi: 'Etkö ole nähnyt dzinnien epätoivoa niiden kokeman häpeän jälkeen? Ja kuinka ne vainoavat naaraskameleita ja niiden ratsastajia?" [10] Umar huomautti: "Tuo on totta." [11]</p>
+      <p>Dzinnit voivat myös kertoa ihmiskontakteilleen suunnitellusta tulevaisuudesta. Esimerkiksi kun joku tulee meedion luo, meedion dzinni saa tietoa henkilön Qareenilta (jokaisen omalta dzinniltä) siitä, millaisia suunnitelmia hän on tehnyt ennen meedion luokse tuloaan. Niinpä meedio pystyy kertomaan hänelle, että hän tulee tekemään sitä tai tätä tai menemään tänne tai tuonne. Tämän menetelmän avulla oikea meedio voi saada tietoonsa yksityiskohtia muukalaisen menneisyydestä. Hän voi kertoa kävijälle tämän vanhempien nimet, missä hän syntyi, millainen hänen lapsuutensa oli jne. Taito kertoa menneisyydestä on tunnusomaista oikealle meediolle, joka on saanut yhteyden dzinneihin. Koska dzinnit voivat matkata ja nähdä suuria alueita yhdellä kertaa, ne voivat myös kerätä suuria määriä tietoja salatuista asioista, kadotetuista tavaroista ja unohdetuista tapahtumista. Todisteita tästä taidosta voi löytää Koraanista, tarinassa profeetta Sulaymaanista ja Bilgeesistä, Saaban kuningattaresta. Kun kuningatar Bilgees tuli tapaamaan profeettaa, tämä pyysi dzinnejä hakemaan hänen valtaistuimensa hänen maastaan. " Eräs väkevä dzinni sanoi: »Tuon sen sinulle ennen kuin nouset paikaltasi; totisesti, minä olen väkevä ja luotettava tähän tehtävään.» Eräs toinen, joka tunsi (pyhää) Kirjaa, lausui: »Tuon sen sinulle ennen kuin ehdit silmääsi räpäyttää.» Ja kun Salomo näki valtaistuimen edessään, hän lausui: »Tämä tapahtuu Herran armosta; Hän koettelee minua, osaanko olla kiitollinen vai olenko kiittämätön. Ken kiittää, hän tekee sen omaksi parhaakseen, ja jos joku on kiittämätön, niin Herrani on joka tapauksessa suopea, armollinen." (Koraani 27:39-40)</p>
+      <h2>Islamin säännöt ennustamisesta</h2>
+      <p>Ennustamiseen liittyvien häpeällisten ja valheellisten seikkojen perusteella islam on erittäin vahvasti sitä vastaan. Islam vastustaa kaikenlaista seurustelua niiden kanssa, jotka harjoittavat ennustamista, paitsi tarkoituksena neuvoa heitä jättämään kielletyt toimensa.</p>
+      <h3>Meedion luona käymisestä</h3>
+      <p>Profeetta (saas) antoi periaatteet, jotka selkeästi kielsivät kaikenlaiset yhteenotot meedioihin. Sofia ilmoitti Hafsan (profeetan vaimon) kertoneen, että profeetta (saas) sanoi: "Sellaisen rukousta, joka menee meedion luo ja kysyy tältä jotakin, ei tulla hyväksymään 40 päivään ja yöhön." [12] Hadithissa mainittu rangaistus koskee niinkin yksinkertaista asiaa, kuin yhteenottoa meedioon ja jonkin asian kysymistä tältä pelkästä uteliaisuudesta. Kieltoa tukee vielä Muaawiyah Ibn al-Kakam as-Salameen hadith, jossa hän sanoi: "Oi Allahin sanansaattaja (saas), totisesti joukossamme on ihmisiä, jotka käyvät selvänäkijöiden luona." Profeetta (saas) vastasi: "Älä käy heidän luonaan."[13] Noin ankara rangaistus on määrätty pelkästä ennustajan luona käymisestä, koska käynti on ensimmäinen askel kohti ennustuksiin uskomista. Jos joku menee sinne ja epäilee kuultunsa totuudellisuutta, ja jokin ennustuksista sattuu osumaan kohdalleen, alkaa hän uskoa niihin ja ruveta todella harrastamaan asiaa. Se, joka menee ennustajalle ja jolle ennustetaan, on edelleen velvollinen suorittamaan rukouksensa noiden 40 päivän ajan, vaikka ei saakaan mitään palkintoa siitä. Jos hän kokonaan hylkää rukoilemisen, hän on tehnyt toisen vakavan synnin.</p>
+      <h3>Meedioon uskomisesta</h3>
+      <p>Islamin lain mukaan sellainen, joka menee ennustajalle ja uskoo, että tämä tuntee näkymättömän ja tulevaisuuden, on Kafir (uskoton). Abu Hurayrah ja al-Hasan molemmat kertoivat profeetan (saas) sanoneen: "Kuka hyvänsä menee meediolle ja uskoo siihen, mitä tämä sanoo, on epäillyt sitä, mikä on ilmoitettu Muhammedille." [14] Sellaiseen uskominen merkitsee niiden Allahille kuuluvien ominaisuuksien antamista luoduille, jotka koskevat kykyä nähdä näkymätöntä ja tulevaa. Seurauksena tästä on rikkomus Tawhid al-Asmaa was-Sifaatia vastaan ja se edustaa Shirkiä tällä Tawhidin osa-alueella. Kufria (epäuskoa) koskevat säännöt sisältävät myös meedioista kertovien tai heidän kirjoittamiensa kirjojen lukemisen ja heidän kuuntelemisensa radiosta tai TV:stä, sillä nämä ovat tavanomaisimpia tapoja, joilla meediot nykyisin julkaisevat ennustuksiaan.</p>
+      <p>Allah tekee selväksi Koraanissa, että kukaan toinen kuin Hän ei tiedä näkymätöntä. Ei edes profeetta Muhammed (saas). Allah sanoi:</p>
+      <blockquote class="koraani">
+        <p>"Hänen hallussaan ovat kaiken näkymättömän avaimet; ei kukaan muu sitä tunne kuin Hän yksin. Hän tietää kaiken maan päällä ja meressä; Hänen tietämättään ei ainoakaan lehti putoa, ei piile yksikään jyvä maan uumenissa eikä ole kosteata eikä kuivaa, joka ei olisi selvästi (Jumalan) kirjoissa."</p>
+        <footer>
+          <cite>(Koraani 6:59)</cite>
+        </footer>
+      </blockquote>
+      <p>Sitten Hän sanoi profeetta Muhammedille (saas):</p>
+      <blockquote class="koraani">
+        <p>"Sano: »Ei ole minun vallassani itse itseäni hyödyttää tai vahingoittaa, kaikki on Jumalan vallassa; mutta jos tuntisin salatun, ympäröisin itseni hyvällä, eikä paha minuun ulottuisi."</p>
+        <footer>
+          <cite>(Koraani 7:188)</cite>
+        </footer>
+      </blockquote>
+      <p>Ja Hän sanoi myös:</p>
+      <blockquote class="koraani">
+        <p>"Sano edelleen: »Ei kukaan taivaassa tai maan päällä, paitsi Jumala, tiedä näkymättömiä."</p>
+        <footer>
+          <cite>(Koraani 27:65)</cite>
+        </footer>
+      </blockquote>
+      <p>Sen tähden kaikki ne menetelmät, joita oraakkelit, meediot ja vastaavat kaikkialla maailmassa käyttävät, ovat muslimeilta kiellettyjä. Käsien viivojen, teelehtien, korttien ja tähtien merkkien väitetään kaikkien antavan tietoja tulevaisuudesta niille, jotka niihin uskovat. Mutta Allah on vahvistanut ilman epäilyksiä, että vain Hän yksin tietää tulevaisuuden:</p>
+      <blockquote class="koraani">
+        <p>"Totisesti, Jumala tietää tuomion hetken, Hän lähettää sateen maan päälle ja Hän tietää, mitkä ihmiskohtalot äitien kohtuihin kätketyt ovat. Yksikään sielu ei aavista, mitä hänen on huomenna koettava, eikä sitä, missä maassa hän on kuoleva. Totisesti, Jumala on tietävä, tarkkanäköinen."</p>
+        <footer>
+          <cite>(Koraani 31:34)</cite>
+        </footer>
+      </blockquote>
+      <p>Muslimien on oltava erityisen varuillaan, kun he kirjoista tai lehdistä lukevat tai joiltakin henkilöiltä kuulevat väitteitä, että jollakin olisi tietoa tulevaisuudesta tai näkymättömästä. Esimerkiksi kun muslimimeteorologi ennustaa huomiseksi sadetta, lunta tai muuta, hänen on lisättävä lopuksi lause "In Shaa Allah" (jos Allah tahtoo). Samaten jos muslimilääkäri ilmoittaa potilaalleen, että tämä tulee synnyttämään lapsensa 9 kuukauden kuluttua tai sinä ja sinä päivänä, hänen on lisättävä lause "In Shaa Allah", koska sellainen lausunto on vain arvio, joka perustuu tiettyihin ennakkotietoihin.</p>
+      <section>
+        <h2>Lisää tietoa aiheesta:</h2>
+        <ul>
+          <li>
+          <a href="http://www.missionislam.com/knowledge/books/JinnDevils.pdf" target="_blank">The World of the Jinn and Devils</a>(englanninkielinen kirja, 3 Mt)</li>
+          <li>
+          <a href="http://www.youtube.com/watch?v=Toiqdm5XHMw" target="_blank">The Angels and the Jinn - Bilal Philips</a>(Video)</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Viitteitä</h2>
+        <ol>
+          <li>Sahih Muslim</li>
+          <li>Koonnut at-Tabari ja al-Haakim</li>
+          <li>Sahih Muslim</li>
+          <li>Sahih Al-Bukhari ja Sahih Muslim</li>
+          <li>Abu Ameenah Bilal Philips, Ibn Taymeeyah's Essay on the Jinn (Riyadh: Tawheed Publication, 1989) s. 21</li>
+          <li>al-Bukhari ja Sahih Muslim</li>
+          <li>Sahih Al-Bukhari, Sahih Muslim, at-Tirmidhi ja Ahmad</li>
+          <li>Sahih Al-Bukhari ja at-Tirmidhi</li>
+          <li>Sahih Al-Bukhari ja Sahih Muslim</li>
+          <li>Kun dzinnejä estettiin salakuuntelemasta enkeleitä, niiden oli pakko seurata arabeja saadakseen selville, miksi heitä estettiin.</li>
+          <li>Sahih Al-Bukhari</li>
+          <li>Sahih Muslim</li>
+          <li>Ibid., vol 4 s 1209, no 5532</li>
+          <li>Sunan Abu Dawud jah al-Bayhaqi</li>
+        </ol>
+      </section>
+      <section>
+        <h2>Kirjallisuutta:</h2>
+        <ul>
+          <li>"The Fundamentals of TAWHEED", Dr Abu Ahmeenah Bilal Philips (osa 5)</li>
+        </ul>
+      </section>
+    </article>
+
+<div class="w3-center"><img alt="" src="bilder/treenew.jpg" border="0"><br></div>
+
+		<!-- begin  -->
+<div class="w3-bar-block w3-light-grey w3-hide-medium w3-hide-large noprint" style="width:100%">
+  <a class="w3-bar-item w3-button w3-theme-l3 w3-padding" href="#">Categoria</a> 
+      <a href="category-creed.html" class="w3-bar-item w3-button w3-hover-theme-l3">Jumala</a>
+      <a href="category-koraani.html" class="w3-bar-item w3-button w3-hover-theme-l3">Koraani</a>
+      <a href="category-islam.html" class="w3-bar-item w3-button w3-hover-theme-l3">Islam</a>
+	  <a href="category-prophethood.html" class="w3-bar-item w3-button w3-hover-theme-l3">Profeetta</a>
+	  <a href="category-pilaria.html" class="w3-bar-item w3-button w3-hover-theme-l3">Viisi Pilaria</a>
+	  <a href="category-ruoka.html" class="w3-bar-item w3-button w3-hover-theme-l3">Islam & Ruoka</a>	  		 
+
+</div>
+<!-- end  -->
+
+ <br>
+		<!-- begin  -->
+<div class="w3-bar-block w3-light-grey w3-hide-medium w3-hide-large noprint" style="width:100%">
+  <a class="w3-bar-item w3-button w3-theme-l3 w3-padding" href="#">Muuta</a>   
+	  <a href="koraani/" class="w3-bar-item w3-button w3-hover-theme-l3">Lue Koraanin käännöstä suomeksi</a>
+	  <a href="kirjasto.html" class="w3-bar-item w3-button w3-hover-theme-l3">Kirjasto</a>
+	  <a href="moske.html" class="w3-bar-item w3-button w3-hover-theme-l3">Moskeijaopas</a>		 
+</div>
+<!-- end  -->
+
+		 <br>
+		<!-- begin  -->
+<div class="w3-bar-block w3-light-grey w3-hide-large noprint" style="width:100%">
+  <a class="w3-bar-item w3-button w3-theme-l3 w3-padding" href="#">Hyviä linkkejä:</a> 
+  <a class="w3-bar-item w3-button w3-padding  w3-hover-theme-l3" href="https://www.islamreligion.com" target="_blank">Islamreligion.com</a>
+  <a class="w3-bar-item w3-button w3-padding  w3-hover-theme-l3" href="https://www.islamreligion.com/videos/" target="_blank">Videoita</a>
+  <a class="w3-bar-item w3-button w3-padding  w3-hover-theme-l3" href="http://www.islamguiden.com" target="_blank">Islamguiden.com</a> 
+  <a class="w3-bar-item w3-button w3-padding  w3-hover-theme-l3" href="http://sisters.islamway.com/" target="_blank"> Naisten asema</a>
+  <a class="w3-bar-item w3-button w3-padding  w3-hover-theme-l3" href="http://kids.islamweb.net/kids/en/ " target="_blank">Lapsille</a> 
+
+</div>
+<!-- end  -->
+		
+<!-- begin  -->
+<div  class="w3-hide-large noprint" id="hijri_div"></div>
+<!-- end  -->
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-small w3-center w3-black w3-xlarge w3-round-large">
+  <a href="https://www.facebook.com/Islamopas" target="_blank"><i class="fa fa-facebook-official"><!-- icon --></i></a>
+  <a href="https://www.twitter.com/islamopas" target="_blank"><i class="fa fa-twitter"><!-- icon --></i></a>
+  <p class="w3-medium" id="copyright"></p>
+<noscript><p>Copyright © 2000-2099 Pirjo <br><b>www.islamopas.com</b></p></noscript>
+</footer>
+<!-- Footer -->
+
+</div>
+</div>
+<div class="w3-col w3-bar-block w3-hide-small w3-hide-medium l2 noprint" id="right_col">
+
+
+
+<!-- begin  -->
+<div id="testHijri"></div>
+<!-- end  -->
+
+
+
+
+<!-- begin  -->
+    <div class="w3-bar-block" style="width:100%">
+    <button class="w3-button w3-block w3-dark-grey w3-hover-dark-grey">Hyviä linkkejä Islamista:</button>
+  </div><!-- begin  -->
+  <div class="w3-bar-block w3-light-grey" style="width:100%">
+    <a class="w3-bar-item w3-button w3-theme w3-padding w3-hover-theme" href="#">Videoita:</a>
+    <a class="w3-bar-item w3-button w3-padding w3-hover-theme" href=
+    "https://www.youtube.com/watch?v=UGoLIh4juvU" target="_blank">Turning Muslim in Texas</a>
+    <a class="w3-bar-item w3-button w3-padding w3-hover-theme" href=
+    "https://www.youtube.com/watch?v=wt-G1FGyq3w" target="_blank">Islam the Treasure Uncovered</a>
+  </div><!-- end  -->
+  <br>
+  <!-- begin  -->
+  <div class="w3-bar-block w3-light-grey" style="width:100%">
+    <a class="w3-bar-item w3-button w3-theme w3-padding w3-hover-theme" href="#">Svenska:</a>
+    <a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="http://islamguiden.com/"
+    target="_blank">Islamguiden</a>
+  </div><!-- end  -->
+  <br>
+  <!-- begin  -->
+  <div class="w3-bar-block w3-light-grey" style="width:100%">
+    <a class="w3-bar-item w3-button w3-theme w3-padding w3-hover-theme" href="#">Englanniksi:</a>
+    <a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="http://sisters.islamway.com/"
+    target="_blank">IslamWay Sisters</a> <a class="w3-bar-item w3-button w3-padding w3-hover-theme"
+    href="http://thisistruth.org/" target="_blank">Plain Truth</a> <a class=
+    "w3-bar-item w3-button w3-padding w3-hover-theme" href="http://www.islamicmedicine.org/"
+    target="_blank">Islamic Medicine</a> <a class="w3-bar-item w3-button w3-padding w3-hover-theme"
+    href="http://en.islamway.net" target="_blank">Islamway</a> <a class=
+    "w3-bar-item w3-button w3-padding w3-hover-theme" href="http://www.islamweb.net/en" target=
+    "_blank">Islamweb</a> 
+	<a class=
+    "w3-bar-item w3-button w3-padding w3-hover-theme" href="https://islamqa.info/en" target=
+    "_blank">Islam-qa</a> <a class="w3-bar-item w3-button w3-padding w3-hover-theme" href=
+    "http://www.islam-guide.com/" target="_blank">Islam-guide</a>  
+	<a class=
+    "w3-bar-item w3-button w3-padding w3-hover-theme" href=
+    "http://islamicweb.com/begin/newMuslims/" target="_blank">New Muslims</a>
+  </div><!-- end  -->
+  <br>  
+    <!-- begin  -->
+  <div class="w3-bar-block w3-light-grey" style="width:100%">
+    <a class="w3-bar-item w3-button w3-theme w3-padding w3-hover-theme" href="#">Videoita:</a>
+    <a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1043/benefits-of-islam/" target="_blank">Benefits of Islam</a>
+	<a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1091/systems-in-islam/" target="_blank">Family in Islam</a>
+	<a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1058/islamic-morals-and-practices/" target="_blank">Islamic Morals</a>
+	<a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1073/tolerance-in-islam/" target="_blank">Tolerance in Islam</a>		
+	<a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1063/stories-of-new-muslims/" target="_blank">Stories of New Muslims</a>
+	<a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1047/what-others-say-about-islam-muhammad-and-quran/" target="_blank">What Others Say about Islam</a>
+	 <a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1054/how-to-convert-to-islam-and-become-muslim/" target="_blank">How to Become Muslim</a>
+	<a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1050/six-pillars-of-faith-and-other-islamic-beliefs/" target="_blank">Pillars of Faith</a>
+	<a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1049/what-is-islam/" target="_blank">What is Islam?</a>
+	<a class="w3-bar-item w3-button w3-padding w3-hover-theme" href="https://www.islamreligion.com/category/1087/islamic-history/" target="_blank">Islamic History</a>	
+  </div>  <!-- end  -->
+  <br>
+<!-- end  -->
+
+</div>
+<!-- End column right -->
+
+
+</div>
+<p>&nbsp;</p>
+<!-- end  -->
+
+
+<script type="text/javascript" src="js/w3.js"></script>
+<script type="text/javascript" src="js/pTimes.js"></script> 
+<script type="text/javascript" src="js/hijri_dates.js"></script>  
+<script type="text/javascript" src="js/opas.js"></script>  
+
+
+</body>
+</html>
+

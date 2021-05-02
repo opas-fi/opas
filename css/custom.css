@@ -1,0 +1,203 @@
+html, body
+{
+	background-image: url("../bilder/bgweb3.gif");
+	background-color: #FFFFCC ;
+    margin: 0;
+	padding: 0;
+
+}
+.w3-padding-tb-0{padding-top:0px!important;padding-bottom:0px!important;}
+.w3-padding-lr-0{padding-left:0px!important;padding-right:0px!important;}
+.w3-margin-0{margin-top:0px!important;margin-bottom:0px!important}
+
+hgroup h1 {color:#ffc107 !important}
+article  h1 {color:#ffc107 !important}
+hgroup h2 {color:#ffda69 !important}
+h2 {color:#ffda69 !important}
+h4 {color:#826200 !important}
+
+blockquote {
+  border: 1px solid #eaf1af;
+  border-left: 10px solid #eaf1af;
+  border-radius: 0px;
+  color:#000;
+  background-color:#f1f1f1;
+  font-size:  95%;
+  margin: 10px;
+  padding:  10px 10px;
+  
+}
+
+blockquote  cite {
+	font-size: 80%;
+	  padding: 10px 10px;
+}
+
+blockquote.koraani {
+  border: 1px solid #eab000;
+  border-left: 10px solid #eab000;
+  border-radius: 0px;
+  background: #fffbf0;
+  font-size: 110%;
+  margin: 10px;
+  padding:  10px 20px;
+  
+}
+
+blockquote.koraani  footer {
+  background-image: url('../bilder/koranen.jpg');
+  background-repeat: no-repeat;
+  padding-left: 45px;
+  padding-bottom: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+}
+
+blockquote.hadith {
+  border: 1px solid #eaf1af;
+  border-left: 10px solid #eaf1af;
+  border-radius: 0px;
+  background: #fffbf0;
+  font-size:  100%;
+  margin: 10px;
+  padding:  10px 20px;
+  
+}
+
+blockquote.hadith  footer {
+  background-image: url('../bilder/hadith.jpg');
+  background-repeat: no-repeat;
+  padding-left: 35px;
+  padding-bottom: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; 
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:  10px 10px;
+  /* width: 100%;  */
+}
+
+.left {
+  float:left;
+  padding:  10px 10px;
+}
+
+.right {
+  float:right;
+  padding:  10px 10px;
+}
+
+
+/* 
+img {border:1px solid #ccc!important;}
+img :hover{opacity:0.60}
+ */
+ 
+ /*  breadcrumb */
+ 
+ .breadcrumb{
+display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;padding:.75rem 1rem;margin-bottom:1rem;list-style:none;background-color:#e9ecef;border-radius:.25rem
+}
+.breadcrumb-item+.breadcrumb-item{padding-left:.5rem}
+.breadcrumb-item+.breadcrumb-item::before{display:inline-block;padding-right:.5rem;color:#6c757d;content:"/"}
+.breadcrumb-item+.breadcrumb-item:hover::before{text-decoration:underline}
+.breadcrumb-item+.breadcrumb-item:hover::before{text-decoration:none}
+.breadcrumb-item.active{color:#6c757d}
+
+/*
+ul.main {
+	list-style: none;
+	margin-left: 10px;
+	padding-left: 1em;
+	
+	padding: 5px;
+}
+
+ul.main li:before {
+	
+	content: "\0BB \020";
+	color: #ffc107 ;
+	padding: 5px;
+}
+*/
+
+article ul  {
+	list-style: none;
+	margin-left: 10px;
+	padding-left: 1em;
+	/* text-indent: -1em;*/
+	padding: 5px;
+}
+
+article ul li:before {	
+	font-family: FontAwesome;
+	content: "\F101"; /* F0DA  F061 F0C1 f005 F0A9*/
+	color: #d09c00 ;
+	padding: 5px;
+}
+
+article ul ul li:before {
+	font-family: FontAwesome;
+	content: "\F101 \F101";
+	color: #d09c00 ;
+	padding: 5px;
+}
+
+
+article section ul li:before {	
+	font-family: FontAwesome;
+	content: "\F0A9"; /* F0DA  F061 F0C1 f005 */
+	color: #d09c00 ;
+	padding: 5px;
+}
+
+.nodisplay {
+	display: none;
+}
+
+#right_col .w3-bar-block a:not(:first-child):before {
+	font-family: FontAwesome;
+	content: "* ";
+	padding: 5px;
+}
+
+.small {
+	max-width:200px;
+}
+
+.special {
+	max-width:150px;
+}
+
+.cat-3 {
+	max-width:200px;
+}
+
+.medium {
+	max-width:400px;
+}
+
+img.medium {
+	width:100%;
+}
+  
+
+
+/* responsive equal height
+.col-container  {
+	display: table;
+}
+
+.col  {
+	display: table-cell;
+	padding: 15px;
+}
+*/

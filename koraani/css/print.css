@@ -1,0 +1,103 @@
+
+
+body {
+font-family: "Times New Roman", Times, serif;
+line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+color: #595959;
+}
+
+h1 {
+font-size: 16pt;
+}
+
+h2 {
+font-size: 14pt;
+}
+
+h3, h4, h5, h6 {
+font-size: 11pt;
+}
+
+a:link, a:visited {
+text-decoration: underline;
+font-weight: bolder;
+}
+
+a img {
+border: 1px solid #595959;
+}
+
+.hidden {
+position: absolute;
+top: -10000px;
+left: 0;
+width: 1px;
+height: 1px;
+overflow: hidden;
+}
+
+nav {
+display: none;
+}
+
+.breadcrumb {
+display: none;
+}
+
+.list-group {
+display: none;
+}
+
+
+
+.ylos {
+display: none;
+}
+
+.verse, .hadith  {
+  width: 90%;
+  margin: 1em auto 0.5em auto;
+  font-size: 1em;
+  color: #f00;
+  text-align: center;
+  }
+  
+.oikea {
+	float: right;
+}
+
+.Quran {
+	direction:rtl;
+}
+
+.noprint {
+	display: none;
+}
+
+
+
+
+ 
+ /* 
+ id="side-widget"
+id="Sideb1"
+ id="sura"
+ overflow: visible !important;'
+ 
+ body {
+display: block; !important;
+height:auto;
+ overflow: visible !important;
+}
+
+
+
+
+table  {page-break-inside: auto;}
+tr  {page-break-inside: avoid; page-break-after:auto}
+div  {page-break-inside: avoid;}
+ */

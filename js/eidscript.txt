@@ -1,0 +1,39 @@
+<script>
+
+//Popup Window Script
+//By JavaScript Kit (http://javascriptkit.com)
+//JavaScript tutorials and over 400+ free scripts
+
+function openpopup(){
+var popurl="sceid.html"
+winpops=window.open(popurl,"","width=380,height=365,")
+}
+
+function get_cookie(Name) {
+  var search = Name + "="
+  var returnvalue = "";
+  if (document.cookie.length > 0) {
+    offset = document.cookie.indexOf(search)
+    if (offset != -1) { // if cookie exists
+      offset += search.length
+      // set index of beginning of value
+      end = document.cookie.indexOf(";", offset);
+      // set index of end of cookie value
+      if (end == -1)
+         end = document.cookie.length;
+      returnvalue=unescape(document.cookie.substring(offset, end))
+      }
+   }
+  return returnvalue;
+}
+
+function loadornot(){
+if (get_cookie('poppedup')==''){
+openpopup()
+document.cookie="poppedup=yes"
+}
+}
+
+loadornot()
+</script>
+	

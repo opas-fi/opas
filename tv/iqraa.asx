@@ -1,0 +1,19 @@
+<ASX version = "3.0">
+<Title>www.islamopas.com == Islamic Tv</Title>
+<Copyright>www.islamopas.com</Copyright>
+
+<Entry>
+<Author>www.islamopas.com</Author>
+<Title>Iqraa TV</Title>
+<REF HREF="iqraa.gif"/>
+<DURATION VALUE="00:00:02.00"/>
+</Entry>
+
+
+<Entry>
+<REF HREF = "mms://stream7.relatif.tv/iqrahd"/>
+<REF HREF = "mms://backup1.relatif.tv/iqrahd"/>
+</Entry>
+
+</ASX>
+

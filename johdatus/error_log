@@ -1,0 +1,10 @@
+[28-Oct-2019 06:09:15 UTC] PHP Warning:  require(../vendor/autoload.php): failed to open stream: No such file or directory in /home/p33455734/public_html/johdatus/form.php on line 10
+[28-Oct-2019 06:09:15 UTC] PHP Fatal error:  require(): Failed opening required '../vendor/autoload.php' (include_path='.:/opt/alt/php71/usr/share/pear') in /home/p33455734/public_html/johdatus/form.php on line 10
+[28-Oct-2019 06:11:59 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer\PHPMailer\PHPMailer' not found in /home/p33455734/public_html/johdatus/form.php:47
+Stack trace:
+#0 {main}
+  thrown in /home/p33455734/public_html/johdatus/form.php on line 47
+[28-Oct-2019 06:17:58 UTC] PHP Fatal error:  Uncaught Error: Class 'PHPMailer' not found in /home/p33455734/public_html/johdatus/email.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/p33455734/public_html/johdatus/email.php on line 7

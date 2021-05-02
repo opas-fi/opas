@@ -1,0 +1,106 @@
+BODY, TD, LI, P		{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 11px
+					}
+					
+
+A					{
+					COLOR: #000099;
+					TEXT-DECORATION: none;
+					}
+
+A:hover				{
+					COLOR: #ff0000;
+					TEXT-DECORATION: underline;
+					}
+
+A:active			{
+					COLOR: #990000;
+					TEXT-DECORATION: underline;
+					}
+
+H1					{
+					FONT-SIZE: 20px;
+					}
+					
+H2					{
+					FONT-SIZE: 18px;
+					}
+					
+H3					{
+					FONT-SIZE: 16px;
+					}
+					
+OL					{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 11px
+					}
+					
+					
+UL					{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 11px;
+					}
+					
+					
+menu				{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 12px;
+					}
+					
+				
+.KORANEN			{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 11px;
+					COLOR: #ff0000;
+					}	
+					
+.LISTA				{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 10px;
+					COLOR: #000000;
+					}	
+					
+.AV			{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 10px;
+					COLOR: darkgreen;
+					TEXT-DECORATION: underline;
+					FONT-WEIGHT: bold;
+					}	
+					
+.SUBMIT				{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 10px;
+					FONT-WEIGHT: bold;
+					}
+					
+					
+.textbgcolor 		{ background-color: #ffffcc }				
+					
+.rubrik2			{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 15px;
+					FONT-WEIGHT: bold;
+					line-height: 30px;
+					}
+					
+					
+.linkrub				{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 10px;
+					}
+					
+.lankar				{
+					FONT-FAMILY: helvetica, Verdana, Arial, geneva, sans-serif;
+					FONT-SIZE: 10px;
+					FONT-WEIGHT: bold;
+					line-height: 12px;
+					}
+
+.merinfo			{
+					FONT-FAMILY: Verdana, Arial, helvetica, geneva, sans-serif;
+					FONT-SIZE: 11px;
+					background-color: yellow;
+					}
+	
