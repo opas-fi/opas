@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Timetable </title>
+	<style>
+		body, tr, form {font-family: tahoma; font-size: 12px; color: #404040; text-align: center; margin: 0; padding: 0}
+		pre {font-family: courier, serif, size: 10pt; margin: 0px 8px;}
+		input {font-size: 12px;}
+		.header {background:#eef; border-bottom: 1px solid #ddd; padding: 7px;}
+		.caption {font-size: 20px; color: #d95722; text-align: center; width: 10em;}
+		.arrow {font-weight: bold; text-decoration: none; color: #3D3D3D; }
+		.arrow:hover {text-decoration: underline;}
+		.command {font-weight: bold; text-decoration: none; color: #AAAAAA; }
+		.command:hover {text-decoration: underline;}
+		.timetable {border-width: 1px; border-style: outset; border-collapse: collapse; border-color: gray; margin: 0 auto;}
+		.timetable td {border-width: 1px; border-spacing: 1px; padding: 1px; border-style: inset; border-color: #CCCCCC;}
+		.head-row {color: black; background-color: #eef;}
+		.today-row {background-color: #F8F7F4; color: black}
+	</style>
+</head>
+
+<body>
+
+<script type="text/javascript" src="PrTimes.js"></script>
+
+<div class="header">
+
+<form class="form" id="form1" action="javascript:update_cities();" >	
+	City:
+	<select id="cities" onchange="update_cities();">
+    <option value="helsinki" selected="selected">Helsinki</option>
+	<option value="nyksund">Nyksund</option>
+	<option value="turku">Turku 2018</option>
+	<option value="tampere">Tampere 2021</option>
+	<option value="vaasa">Vaasa ??</option>
+    <option value="cairo">Cairo</option>
+	<option value="riyadh90">Riyadh</option>
+	<option value="karachi">Karachi</option>
+	<option value="paris">paris (not sure)</option>
+	</select>
+	Display:
+		<select id="displayFields" size="1" style="font-size: 12px;" onchange="update_cities()">
+		<option value="allFields" >All Fields</option>
+		<option value="morningFields">Morning Fields</option>
+		<option value="eveningFields">Evening Fields</option>
+		<option value="sunrisesunset">Sunrise / Sunset</option>
+		<option value="fajrisha">Fajr / Isha</option>
+		<option value="salattimes" selected="selected">Salat Times</option>
+		
+		
+    </select>&nbsp;
+	from: <input type="text" value="1" id="from" size="2" onchange="update();" />&nbsp;
+	to: <input type="text" value="12" id="to" size="2" onchange="update();" />&nbsp;
+</form>
+
+<p id="demo"></p><br />
+
+<form class="form" id="form2" action="javascript:update();">
+	Latitude: <input type="text" value="60.32" id="latitude" size="2" onchange="update();" />&nbsp;
+	Longitude: <input type="text" value="24.56" id="longitude" size="2" onchange="update();" />&nbsp;
+	Time Zone: <input type="text" value="2" id="timezone" size="2" onchange="update();" />&nbsp;
+	DST: 
+	<select id="dst" size="1" style="font-size: 12px;" onchange="update()">
+		<option value="auto" selected="selected">Auto</option>
+		<option value="0">0</option>
+		<option value="1">1</option>
+    </select>&nbsp;	<br><br>
+	Method: 
+	<select id="method" size="1" style="font-size: 12px;" onchange="update()">
+		<option value="moonsighting">MOON SIGHTING: TODO</option>
+		<option value="MWL" selected="selected">Muslim World League (MWL)</option>
+		<option value="ISNA">Ic Society of North America (ISNA)</option>
+		<option value="Egypt">Egyptian General Authority of Survey</option>
+		<option value="Makkah">Umm al-Qura University, Makkah</option>	
+		<option value="Karachi">University of Islamic Sciences, Karachi</option>
+		<option value="Jafari">Shia Ithna-Ashari (Jafari)</option>
+		<option value="Tehran">Institute of Geophysics, University of Tehran</option>
+    </select>
+	HLA	<select id="highLatMethods" size="1" style="font-size: 12px;" onchange="update()">
+		<option value="NightMiddle" selected="selected">NightMiddle</option>
+		<option value="AngleBased">AngleBased</option>
+		<option value="OneSeventh">OneSeventh</option>
+		<option value="FixedTime">FixedTime</option>
+		<option value="None" >None</option>
+    </select>&nbsp;
+</form>
+</div>
+<br/>
+
+<table align="center">
+<tr>
+	<td><a href="javascript:displayMonth(-12)" class="arrow">&lt;&lt;</a></td>
+	<td id="table-title" class="caption"></td>
+	<td><a href="javascript:displayMonth(+12)" class="arrow">&gt;&gt;</a></td>
+</tr>
+</table>
+
+<br/>
+<table id="timetable" class="timetable">
+	<tbody></tbody>
+</table>
+
+<div align="center" style="margin-top: 7px">
+	Source: <a href="http://praytimes.org/" class="command">PrayTimes.org</a> |
+	Time Format: <a id="time-format" href="javascript:switchFormat(1)" title="Change clock format" class="command"></a>
+</div>
+<br/>
+<span><img src="twilight.png" width="50%"></span><br>
+<br/>
+
+<script type="text/javascript">
+	//$('demo').innerHTML ="";
+	var currentDate = new Date();
+	var timeFormat = 1;
+	switchFormat(1);		
+	var adjustments={  
+		dhuhr    : '-1 min',  
+		highLats : 'OneSeventh'
+	};
+ 
+	
+	// display monthly timetable
+	function displayMonth(offset) {
+		var lat = $('latitude').value;
+		var lng = $('longitude').value;
+		var timeZone = $('timezone').value;
+		var dst = $('dst').value;
+		var method = $('method').value;
+		if (adjustments)
+			adjustments.highLats=$('highLatMethods').value;
+		//if (adjustments) $('demo').innerHTML +=adjustments.maghrib+'<br>';
+		
+		prayTimes.adjust(adjustments);
+		prayTimes.setMethod(method);
+		currentDate.setMonth(currentDate.getMonth()+ 1* offset);
+		var month = currentDate.getMonth();
+		var year = currentDate.getFullYear();
+		var title = year;
+		$('table-title').innerHTML = title;
+		makeTable(year, month, lat, lng, timeZone, dst);
+	}
+
+	// make monthly timetable
+	function makeTable(year, month, lat, lng, timeZone, dst) {		
+		var items = {month: 'month', day: 'Day', dawnAstr: 'dawnAstr', fajr: 'Fajr', dawnNav: 'dawnNav', dawnCiv: 'dawnCiv', shuruk:'Shuruk', sunrise: 'Sunrise', 
+		dhuhr: 'Dhuhr', asr: 'Asr', sunset: 'sunset',
+		maghrib: 'Maghrib',  duskCiv: 'duskCiv', duskNav: 'duskNav',isha: 'Isha', duskAstr: 'duskAstr'};
+		if ($('displayFields').value=="morningFields")
+			items = {month: 'month', day: 'Day', dawnAstr: 'dawnAstr', fajr: 'Fajr', dawnNav: 'dawnNav', dawnCiv: 'dawnCiv', shuruk:'Shuruk', sunrise: 'Sunrise'};
+		if ($('displayFields').value=="eveningFields")
+			items = {month: 'month', day: 'Day', 	sunset: 'sunset', maghrib: 'Maghrib',  duskCiv: 'duskCiv', duskNav: 'duskNav',isha: 'Isha', duskAstr: 'duskAstr'};
+		if ($('displayFields').value=="sunrisesunset")
+			items = {month: 'month', day: 'Day',shuruk:'Shuruk', sunrise: 'Sunrise', sunset: 'sunset', maghrib: 'Maghrib'};	
+		if ($('displayFields').value=="fajrisha")
+			items = {month: 'month', day: 'Day', dawnAstr: 'dawnAstr', fajr: 'Fajr', dawnNav: 'dawnNav', dawnCiv: 'dawnCiv',  duskCiv: 'duskCiv', duskNav: 'duskNav',isha: 'Isha', duskAstr: 'duskAstr'};
+		if ($('displayFields').value=="salattimes")
+			items = {month: 'month', day: 'Day',  fajr: 'Fajr', shuruk:'Shuruk', 		dhuhr: 'Dhuhr', asr: 'Asr', 		maghrib: 'Maghrib',  isha: 'Isha'};
+		var months=["Jan","Feb","Mars","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];	
+		var tbody = document.createElement('tbody');
+		tbody.appendChild(makeTableRow(items, items, 'head-row'));
+		
+		var startMonth=$('from').value-1;
+		var endMonth= $('to').value;
+		//var date = new Date(year, 0, 1);
+		var date = new Date(year, startMonth, 1);
+		//var endDate = new Date(year+1, 0, 1);
+		var endDate = new Date(year, endMonth, 1);
+		var format = timeFormat ? '12hNS' : '24h';
+		
+		while (date < endDate) {
+			var times = prayTimes.getTimesExt(date, [lat, lng], timeZone, dst, format);
+			//FIXME
+			if (dateInInterval(date) && $('highLatMethods').value=="FixedTime"){
+				times.fajr="02:38";
+				times.isha="23:54";
+			}
+			times.day = date.getDate();
+			times.month = months[date.getMonth()];
+			var today = new Date(); 
+			var isToday = (date.getMonth() == today.getMonth()) && (date.getDate() == today.getDate());
+			var klass = isToday ? 'today-row' : '';
+			tbody.appendChild(makeTableRow(times, items, klass));
+			date.setDate(date.getDate()+ 1);  // next day
+		}
+		removeAllChild($('timetable'));
+		$('timetable').appendChild(tbody);
+	}
+
+	// make a table row
+	function makeTableRow(data, items, klass) {
+		var row = document.createElement('tr');
+		for (var i in items) {
+			var cell = document.createElement('td');
+			cell.innerHTML = data[i];
+			cell.style.width = i=='day' ? '2.5em' : '3.7em';
+			if (i=='fajr' || i=='isha')
+				cell.style.background='#0f0';
+			if (i=='shuruk' || i=='maghrib')
+				cell.style.background='#8BB';
+			row.appendChild(cell);
+		}
+		row.className = klass;
+		return row;		
+	}
+
+	// remove all children of a node
+	function removeAllChild(node) {
+		if (node == undefined || node == null)
+			return;
+
+		while (node.firstChild)
+			node.removeChild(node.firstChild);
+	}
+	
+	function dateInInterval(day){
+		var dayIsInInterval=false;
+		var startDate = "16/04";
+		var endDate   = "26/08";
+		
+		var D1 =startDate.split("/");
+		var D2 =endDate.split("/");
+		
+		var d1 = new Date(day.getFullYear(), parseInt(D1[1]) - 1, D1[0]);
+		var d2 = new Date(day.getFullYear(), parseInt(D2[1]) - 1, D2[0]);
+		
+		if (day.getTime() <= d2.getTime() && day.getTime() >= d1.getTime())
+			dayIsInInterval=true;
+			
+		return dayIsInInterval;
+	}
+
+	// switch time format
+	function switchFormat(offset) {
+		var formats = ['24-hour', '12-hour'];
+		timeFormat = (timeFormat+ offset)% 2;
+		$('time-format').innerHTML = formats[timeFormat];
+		update();
+	}
+
+	// update table
+	function update() {
+		displayMonth(0);
+	}
+
+	// return month full name
+	function monthFullName(month) {
+		var monthName = new Array('January', 'February', 'March', 'April', 'May', 'June', 
+						'July', 'August', 'September', 'October', 'November', 'December');
+		return monthName[month];
+	}
+
+	function $(id) {
+		return document.getElementById(id);
+	}
+	
+	
+	//Custom function that changes a select element's option.
+	function select(selectId, optionValToSelect){
+    //Get the select element by it's unique ID.
+		var selectElement = document.getElementById(selectId);
+		//Get the options.
+		var selectOptions = selectElement.options;
+		//Loop through these options using a for loop.
+		for (var opt, j = 0; opt = selectOptions[j]; j++) {
+        //If the option of value is equal to the option we want to select.
+			if (opt.value == optionValToSelect) {
+            //Select the option and break out of the for loop.
+				selectElement.selectedIndex = j;
+				break;
+			}
+		}
+	}
+
+	
+	var myCities = {
+		helsinki: {latitude:"60.32", longitude:"24.56", timezone:"2", dst:"auto", method:"MWL", adjustments:{fajr:18, shuruk:'-4 min',sunrise:'0 min', dhuhr:'-1 min',maghrib:'5 min',isha:17,highLats: 'FixedTime'}},
+		
+		nyksund: {latitude:"68.994865", longitude:"15.012734", timezone:"1", dst:"auto", method:"MWL", adjustments:{fajr:18, shuruk:'-4 min',sunrise:'0 min', dhuhr:'1 min',maghrib:'5 min',isha:17,highLats: 'None'}},  
+		
+		turku: {latitude:"60.45148", longitude:"22.26869", timezone:"2", dst:"auto", method:"MWL", adjustments:{fajr:14.3, dhuhr:'-1 min',maghrib:'5 min',isha:12.3,highLats: 'NightMiddle'}},
+		
+		tampere: {latitude:"61.49911", longitude:"23.78712", timezone:"2", dst:"auto", method:"MWL", adjustments:{fajr:15, dhuhr:'-1 min',maghrib:'5 min',isha:15,highLats: 'None'}},
+		
+		vaasa: {latitude:"63.096", longitude:"21.61577", timezone:"2", dst:"auto", method:"MWL", adjustments:{fajr:18, dhuhr:'-1 min',maghrib:'5 min',isha:17,highLats: 'None'}},
+		
+		cairo: {latitude:"30.0771", longitude:"31.2859", timezone:"2", dst:"0", method:"Egypt", adjustments:{dhuhr:'1 min',maghrib:'1 min'}},
+		
+		riyadh90: {latitude:"24.6537", longitude:"46.7152", timezone:"3", dst:"0", method:"Makkah", adjustments:{dhuhr:'1 min',maghrib:'1 min',highLats: 'None'}},
+				
+		karachi: {latitude:"24.9206", longitude:"67.0703", timezone:"5", dst:"0", method:"Karachi", adjustments:{dhuhr:'1 min', asr:'Hanafi',maghrib:'1 min',highLats: 'None'}},
+		
+		paris: {latitude:"48.85341", longitude:"2.3488", timezone:"2", dst:"0", method:"MWL", adjustments:{fajr:15.3,dhuhr:'1 min', maghrib:'3 min',isha:13.8,highLats: 'None'}}
+	};
+
+	// update cities
+	function update_cities() {
+		//$('demo').innerHTML ="";
+		var index=$('cities').value;
+		$('latitude').value = myCities[index]['latitude'];
+		$('longitude').value = myCities[index]['longitude'];
+		$('timezone').value = myCities[index]['timezone'];
+		select('dst', myCities[index]['dst']);
+		select('method', myCities[index]['method']);
+		adjustments=myCities[index]['adjustments'];
+		select('highLatMethods', adjustments.highLats);
+		
+		update();
+	}
+	
+	update_cities();
+	
+</script>
+
+</body>
+</html>
+
+
+
